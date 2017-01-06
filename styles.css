@@ -45,13 +45,13 @@ body {
   position: absolute;
   padding: 10px;
   text-align: center;
-  font-size: 40px;
+  font-size: 25px;
   font-family: 'Slabo 27px', sans-serif;
   color: #EEE;
   text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5), -1px -1px 3px black; }
 
 #header .header {
-  font-size: 25vh;
+  font-size: 20vh;
   top: 0;
   bottom: 0; }
 
