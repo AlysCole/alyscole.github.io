@@ -43,14 +43,17 @@ body {
 
 .header {
   position: absolute;
+  padding: 10px;
   text-align: center;
-  font-size: 50px;
+  font-size: 40px;
   font-family: 'Slabo 27px', sans-serif;
   color: #EEE;
   text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5), -1px -1px 3px black; }
 
 #header .header {
-  font-size: 25vh; }
+  font-size: 25vh;
+  top: 0;
+  bottom: 0; }
 
 .type:after {
   content: "";
