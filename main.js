@@ -35,8 +35,8 @@ $(window).load(function() {
     if (ind < 0) return;
 
     el.text(txt.substring(0, txt.length - ind));
-    setTimeout((function() {typeIt(el, txt, ind - 1)}),
-              (Math.random() * (300 - 60 + 1) + 60));
+    window.setTimeout((function() {typeIt(el, txt, ind - 1)}),
+                      (Math.random() * (80 - 60 + 1) + 80));
   }
 
   // Smooth scroll
