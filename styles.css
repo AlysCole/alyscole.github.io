@@ -1,5 +1,6 @@
 body {
   background: #101012;
+  height: 100%;
   width: 100%;
   margin: 0; }
 
@@ -21,30 +22,30 @@ ul > ul {
 .fullscreen-section {
   position: relative;
   height: 100vh;
-  width: 100%; }
+  width: 100%;
+  overflow: auto; }
 
 .section-body {
+  min-height: 100%;
   display: flex;
-  align-items: center;
-  align-content: center;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 100%;
-  overflow: hidden; }
+  flex-wrap: wrap; }
 
 .section-body .section-body-text {
   justify-content: center;
   vertical-align: middle;
   padding: 20px;
-  overflow: auto;
   font-size: 20px;
   color: #EEE;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); }
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  display: none; }
 
 .header {
-  padding: 0 30px;
+  padding: 20px; }
+
+.header-text {
   font-size: 50px;
   font-family: 'Slabo 27px', sans-serif;
   color: #EEE;
@@ -58,17 +59,9 @@ ul > ul {
   position: relative;
   text-align: center; }
 
-#header .header {
-  font-size: 20vh; }
-
-.type:after {
-  content: "";
+.type::after {
+  content: "|";
   display: inline-block;
-  vertical-align: 0%;
-  width: .4em;
-  height: 4px;
-  background: #EEE;
-  box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5), -1px -1px 3px black;
   animation: caretPulsate 1s linear infinite;
   -webkit-animation: caretPulsate 1s linear infinite; }
 
@@ -102,14 +95,16 @@ ul > ul {
   text-decoration: none; }
 
 .nav-list {
+  padding: 10px;
   position: relative;
-  margin: 0 auto;
+  margin: 0 10px;
   text-align: center; }
 
 .nav-list li {
+  margin: 10px;
   display: inline;
   list-style: none;
-  margin: 10px; }
+  white-space: nowrap; }
 
 #about {
   background: #EEE;
@@ -125,7 +120,7 @@ ul > ul {
 #contact-header {
   color: #242428; }
 
-#contact .type:after {
+#contact .type::after {
   content: "";
   display: inline-block;
   vertical-align: 0%;
@@ -138,7 +133,7 @@ ul > ul {
 
 #social-media-buttons a {
   margin: 0 10px;
-  font-size: 10vh;
+  font-size: 100px;
   color: #252529; }
 
 #contact-body .section-body-text {

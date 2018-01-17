@@ -1,8 +1,9 @@
-$(window).load(function() {
+$(window).on('load', function() {
   var $typeElements = $('.to-type');
   var $window = $(window);
 
   $window.on('scroll resize', checkElInView);
+
   function checkElInView() {
     var winHeight = $window.height();
     var winTopPos = $window.scrollTop();
@@ -22,7 +23,12 @@ $(window).load(function() {
         var txt = $el.data("text"),
             ind = txt.length;
         
-        typeIt($el, txt, ind);
+        typeIt($el, txt, ind, function($el) {
+          console.log("Function called!");
+          let $bodyEl = $el.parent().parent().children('.section-body-text');
+          console.log($bodyEl);
+          $bodyEl.slideDown(1000).fadeIn(1000).css("display","block");
+        });
       }
     });
 
@@ -31,13 +37,21 @@ $(window).load(function() {
   $window.trigger('scroll');
 
   // Typing animation for header text
-  function typeIt(el, txt, ind) {
-    if (ind < 0) return;
+  function typeIt($el, txt, ind, func) {
+    if (ind < 0) {
+      if (typeof(func) !== 'undefined' && func !== null)
+        func($el);
+      else
+        console.log("No existing function.");
+      return;
+    }
 
-    el.text(txt.substring(0, txt.length - ind));
-    window.setTimeout((function() {typeIt(el, txt, ind - 1)}),
+    $el.text(txt.substring(0, txt.length - ind));
+    window.setTimeout((function() {
+      typeIt($el, txt, ind - 1, ( func !== null ? func : null ));
+    }),
                       (Math.random() * (80 - 60 + 1) + 80));
-  }
+}
 
   // Smooth scroll
   $(function() {

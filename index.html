@@ -7,13 +7,15 @@
     <link href="https://fonts.googleapis.com/css?family=Reem+Kufi" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" type="text/css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="main.js"></script>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="./main.js"></script>
   </head
   <body>
     <div id="header" class="fullscreen-section fullscreen-bg">
-        <span id="header-text" class="header to-type" data-text="Hi! I'm Alyssa."></span>
+        <div class="header">
+            <span id="header-text" class="header-text to-type" data-text="Hi! I'm Alyssa."></span>
+        </div>
         <div id="navigation">
           <ul class="nav-list">
             <li class="nav-option"><a href="#about" id="navigation-about" class="navigation-link">Experience</a></li> 
@@ -24,7 +26,9 @@
     </div>
     <div id="about" class="fullscreen-bg fullscreen-section">
         <div id="about-body" class="section-body">
-            <span id="about-header" class="header to-type" data-text="I have experience with..."></span>
+            <div class="header">
+                <span id="about-header" class="header-text to-type" data-text="I have experience with..."></span>
+            </div>
             <div class="section-body-text">
                 <ul>
                     <li><u>JavaScript</u></li>
@@ -50,14 +54,18 @@
     </div>
     <div id="works" class="fullscreen-bg fullscreen-section">
       <div id="works-body" class="section-body">
-      <span id="works-header" class="header to-type" data-text="A couple of things I did."></span>
+          <div class="header">
+              <span id="works-header" class="header-text to-type" data-text="A couple of things I did."></span>
+          </div>
         <div class="section-body-text">
           <p>Coming soon.</p>
         </div></div>
     </div>
     <div id="contact" class="fullscreen-bg fullscreen-section">
       <div id="contact-body" class="section-body">
-          <span id="contact-header" class="header to-type" data-text="Need to find me?"></span>
+          <div class="header">
+              <span id="contact-header" class="header-text to-type" data-text="Need to find me?"></span>
+          </div>
           <div class="section-body-text">
               <p id="social-media-buttons">
                   <a href="https://github.com/AlysCole"><i class="fa fa-github" aria-hidden="true"></i></a>
