@@ -143,4 +143,7 @@ ul > ul {
 u {
   font-family: mono; }
 
+li.inner-list {
+  list-style-type: none; }
+
 /*# sourceMappingURL=styles.css.map */
