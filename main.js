@@ -24,9 +24,7 @@ $(window).on('load', function() {
             ind = txt.length;
         
         typeIt($el, txt, ind, function($el) {
-          console.log("Function called!");
           let $bodyEl = $el.parent().parent().children('.section-body-text');
-          console.log($bodyEl);
           $bodyEl.slideDown(1000).fadeIn(1000).css("display","block");
         });
       }
