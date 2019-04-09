@@ -9,9 +9,10 @@ body {
 }
 
 ul {
+  list-style-type: ">";
   margin: 0;
-  margin-left: 0px;
-  padding-left: 0px;
+  margin-left: 0;
+  padding-left: 0;
 }
 
 .fullscreen-bg {
@@ -147,13 +148,12 @@ ul {
   display: table;
 }
 
-#about-body #about-skill-names > ul {
-  list-style-type: none;
+#about-skill-names ul {
+  padding-left: 15px;
 }
 
-#about-body #about-skill-names > ul ul {
-  list-style-type: "-";
-  padding-left: 10px;
+#about-skill-names ul ul {
+  padding-left: 25px;
   color: #AAA;
 }
 
