@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu Mono');
-@import url('https://fonts.googleapis.com/css?family=Roboto Mono');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300,400&display=swap');
 
 body {
-  font-family: 'Roboto Mono';
+  font-family: 'Roboto Mono:400', monospace;
   background: #101012;
   color: white;
   height: 100%;
@@ -16,7 +16,7 @@ a {
 }
 
 a:hover {
-  color: #80928d;
+  color: #ded2a3;
 }
 
 #about ul {
@@ -79,6 +79,22 @@ a:hover {
   justify-content: center;
 }
 
+#works .project-links > a {
+  text-decoration: none;
+  font-style: normal;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 13px;
+  padding: 5px;
+  color: #EEE;
+  border: 2px solid #EEE;
+  border-radius: 5px;
+}
+
+#works .project-links > a:hover {
+  color: #ded2a3;
+  border: 2px solid #ded2a3;
+}
+
 #armtimeconverter-img {
   height: 150px;
   background-image: url("./assets/armtimeconverter.png");
@@ -91,7 +107,7 @@ a:hover {
 }
 .header-text {
   font-size: 50px;
-  font-family: 'Ubuntu Mono', fixed-width; 
+  font-family: 'Ubuntu Mono', monospace; 
   color: #EEE;
   text-shadow: 1px 1px 1px rgba(255,255,255,.5),
   -1px -1px 1px rgba(0,0,0,1);
