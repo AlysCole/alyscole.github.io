@@ -174,14 +174,9 @@ a:hover {
 }
 
 #about {
-  background: #EEE;
-  background-image: repeating-linear-gradient(
-    45deg,
-    #49443A,
-    #49443A 10px,
-    #101012 10px,
-    #101012 20px
-  );
+  background-color: #938373;
+  background-image: url('./assets/gradient.png');
+  background: radial-gradient(#938373, #242428);
   background-attachment: fixed;
 }
 
