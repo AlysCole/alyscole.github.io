@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "My portfolio page",
   "main": "index.js",
+  "scripts": {
+	  "start": "webpack-dev-server",
+    "build": "webpack"
+  },
   "repository": "git@github.com:AlysCole/alyscole.github.io.git",
   "author": "AlysCole <alyscole@outlook.com>",
   "license": "MIT",

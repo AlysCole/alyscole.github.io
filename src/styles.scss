@@ -31,9 +31,15 @@ a:hover {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
-  background-attachment: fixed;
+  background-attachment: scroll;
   width: 100%;
   height: 100%;
+}
+
+@supports (-webkit-overflow-scrolling: touch) {
+  .fullscreen-bg {
+    background-attachment: scroll;
+  }
 }
 
 .fullscreen-section {
