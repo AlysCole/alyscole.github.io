@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Alyssa Alvarez</title>
+        <meta name="description" content="Alyssa Alvarez is a front-end engineer who builds high-performance digital experiences for the web" />
         <link rel="stylesheet" href="/styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Fonts -->
-         <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&family=Azeret+Mono&family=Rosarivo:ital@1&display=swap" rel="stylesheet">
+
+        <!-- Icons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest"> 
     </head>
     <body>
         <div class="square-container"></div>
@@ -23,10 +32,10 @@
                 <div class="hero__hello">Hello, I&apos;m</div>
                 <div class="hero__name">Alyssa Alvarez,</div>
                 <div class="hero__subline">and I dabble with things on the web</div>
+                <svg class="angles-down bounce2 w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/>
+                </svg>
             </section>
-            <svg class="angles-down bounce2 w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/>
-            </svg>
             <nav class="sidebar__nav">
                 <ul>
                     <li><a class="nav__link hero" href="#"><span class="highlighted__text">1.</span> Home</a></li>
@@ -38,11 +47,13 @@
             <div class="fixed__sidebar">
                 <div class="fixed__sidebar--content">
                     <section class="about-me" id="about-me">
+                        <h2 class="subheading">About Me</h2>
                         <p>It started with custom UIs built for text-based games, and themes for community forums. It wasn’t long before I dove into web development. Since then, I’ve worked on a number of projects spanning different industries, from <span class="highlighted__text">online education</span> to (currently) <span class="highlighted__text">health care</span>.</p>
                         <p>Today, I’m focused on building web applications with the user and good design in mind.</p>
                         <p>Outside of coding, I enjoy working on personal projects, cycling, a little bit of weightlifting, and reading fantasy and sci-fi on my spare time.</p>
                     </section>
                     <section class="projects" id="projects">
+                        <h2 class="subheading">Projects</h2>
                         <div class="project__card">
                             <div class="project__preview">
                                 <img src="Armageddon_Time-Converter.png" alt="A screenshot of a time conversion web app" />
@@ -97,6 +108,7 @@
                         </div>
                     </section>
                     <section class="contact" id="contact">
+                        <h2 class="subheading">Contact Me</h2>
                         <p>Need to reach out? You can contact me at <a href="mailto:hello@alyssanqa.com">hello(at)alyssanqa.com</a>.</p>
                         <div class="contact__socials">
                             <!-- GitHub -->
