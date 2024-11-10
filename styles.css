@@ -118,13 +118,22 @@ a.nav__link {
   color: var(--text);
 }
 
+a.nav__link.highlighted__text {
+  color: var(--green);
+}
+
+a {
+  color: var(--cyan);
+  text-decoration: none;
+}
+
 main {
   display: flex;
   flex-direction: column;
   padding: 0 15%;
 }
 
-.hero {
+section.hero {
   font-family: "Azeret Mono", monospace;
   font-optical-sizing: auto;
   height: 80vh;
@@ -169,7 +178,7 @@ main {
 
 .sidebar__nav {
   position: sticky;
-  width: 30vw;
+  width: 320px;
   margin-top: 10%;
   height: 0;
   top: 20%;
@@ -196,7 +205,7 @@ main {
 }
 
 .fixed__sidebar--content {
-  margin-left: 30vw;
+  margin-left: 320px;
   flex: 1;
 }
 
@@ -221,13 +230,21 @@ section.projects {
   border-radius: 5px;
   border: 1px solid var(--guide);
   padding: 1rem;
+  width: calc(50% - 1rem);
 }
 
 .project__preview {
   height: 180px;
-  width: 180px;
-  background-color: var(--gutter);
+  width: 100%;
+  max-width: 100%;
   margin-bottom: 1rem;
+}
+
+.project__preview img {
+  max-height: 180px;
+  max-width: 100%;
+  border-radius: 5px;
+  border: 1px solid var(--guide);
 }
 
 .project__name {
@@ -235,4 +252,28 @@ section.projects {
   color: var(--cyan); 
   font-size: 1.4rem;
   margin-bottom: 1rem;
+}
+
+svg.socials__icon {
+  height: 4rem;
+  color: var(--cyan);
+}
+
+section.contact > p {
+  font-size: 1.2rem;
+  margin: 0;
+  margin-bottom: 2rem;
+}
+
+/* Animations */
+
+.bounce2 {
+  animation: bounce2 2s ease infinite;
+  cursor: pointer;
+}
+
+@keyframes bounce2 {
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(30px);}
+	60% {transform: translateY(15px);}
 }

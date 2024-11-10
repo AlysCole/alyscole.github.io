@@ -1,3 +1,5 @@
+let currentScrolledSection;
+
 window.addEventListener("load", () => {
     const dimensions = document.body.getBoundingClientRect();
     const screenWidth = dimensions.height;
@@ -42,18 +44,62 @@ window.addEventListener("load", () => {
         return isVisible;
     }
 
-    const sidebarLinks = document.querySelectorAll(".sidebar__nav > ul > li > a");
     const sidebarLinkEls = {
+        hero: document.querySelector(".sidebar__nav > ul > li > .nav__link.hero"),
         aboutMe: document.querySelector(".sidebar__nav > ul > li > .nav__link.about"),
         projects: document.querySelector(".sidebar__nav > ul > li > .nav__link.projects"),
         contact: document.querySelector(".sidebar__nav > ul > li > .nav__link.contact")
     }
 
-    document.addEventListener("scroll", () => {
-        // Check which section is scrolled into view
-        const aboutMeSection = document.getElementById("#about-me");
-        const projectsSection = document.getElementById("#projects");
-        // const contactMeSection = document.getElementById("#contact-me");
+    const sections = {
+        hero: document.getElementsByClassName("hero")?.[0],
+        contact: document.getElementById("contact"),
+        projects: document.getElementById("projects"),
+        aboutMe: document.getElementById("about-me"),
+    };
 
+    const resetHighlightedLinks = () => {
+        for (linkKey in sidebarLinkEls) {
+            const el = sidebarLinkEls?.[linkKey];
+            if (sidebarLinkEls.hasOwnProperty(linkKey)) {
+                el.classList.remove("highlighted__text");
+            }
+        }
+    }
+
+    document.addEventListener("scroll", () => {
+        const keysInOrder = ["contact", "projects", "aboutMe", "hero"];
+        for (let i = 0; i < keysInOrder?.length; i++) {
+            const sectionKey = keysInOrder?.[i];
+            const el = sections?.[sectionKey];
+            console.log("Current section:", el, sections, sectionKey);
+
+            if (isScrolledIntoView(el) && currentScrolledSection !== sectionKey) {
+                resetHighlightedLinks();
+
+                const link = sidebarLinkEls?.[sectionKey];
+                console.log("Link to be highlighted:", link);
+                link.classList.add("highlighted__text");
+
+                currentScrolledSection = sectionKey;
+            };
+        }
     })
+
+    const anglesDown = document.getElementsByClassName("angles-down")?.[0];
+
+    anglesDown.addEventListener("click", () => {
+        console.log("Main Body");
+        anglesDown.scrollIntoView({
+            behavior: "smooth",
+        });
+    });
+
+    const homeLinks = document.querySelectorAll(".nav__link.hero");
+    homeLinks.forEach((link) => {
+        link.addEventListener("click", (event) => {
+            event.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    });
 });
