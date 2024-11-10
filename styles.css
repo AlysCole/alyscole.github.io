@@ -48,6 +48,7 @@ body {
 }
 
 .square-container {
+  top: 0;
   position: absolute;
   display: flex;
   flex-flow: row wrap;
@@ -55,7 +56,7 @@ body {
   justify-content: center;
   width: 100vw;
   overflow: hidden;
-  z-index: 0;
+  z-index: 1;
 }
 
 .square {
@@ -69,7 +70,7 @@ body {
 
 .square:hover {
   background: var(--text);
-  opacity: 0.05;
+  opacity: 0.08;
 }
 
 .hero__nav {
@@ -116,6 +117,7 @@ body {
 a.nav__link {
   text-decoration: none;
   color: var(--text);
+  z-index: 2;
 }
 
 a.nav__link.highlighted__text {
@@ -125,6 +127,8 @@ a.nav__link.highlighted__text {
 a {
   color: var(--cyan);
   text-decoration: none;
+  z-index: 2;
+  position: relative;
 }
 
 main {
@@ -171,6 +175,7 @@ section.hero {
   align-self: center;
   bottom: 0;
   position: absolute;
+  z-index: 2;
 }
 
 .fixed__sidebar {
@@ -340,6 +345,5 @@ section.contact > p {
   .project__card {
     flex-basis: 100%;
     width: 100%;
-    flex: 1;
   }
 }
